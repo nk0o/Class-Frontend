@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window Size</title>
+    <style> 
+    .tag{
+        background-color: thistle;
+        display: inline-block;
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+       <div class="tag">Window Size</div>
+       <div class="window_screen">window.screen: 모니터 사이즈 </div>
+       <div class="window_outer">window.outer: 페이지를 넘어선 브라우저 사이즈</div>
+       <div class="window_inner">window.inner:브라우저 스크롤 포함 </div>
+       <div class="documentElement_clientWidth">documentElement.clientWidth:브라우저 스크롤 미포함 순수 페이지의 크기</div>
+    </div>
+    <script>
+        const tag = document.querySelector('.tag');
+        function updateTag(){
+            tag.innerHTML = `
+                window.screen: ${window.screen.width}, ${window.screen.height} <br/>
+                window.outer: ${window.outerWidth}, ${window.outerHeight} <br/>
+                window.inner: ${window.innerWidth}, ${window.innerHeight} <br/>
+                documentElement.clientWidth: ${document.documentElement.clientWidth}, window.screen: ${document.documentElement.clientWidth.height}
+            `;
+        };
+        updateTag();
+        window.addEventListener('resize', ()=>{
+            updateTag();
+        })
+    </script>
+</body>
+</html>
