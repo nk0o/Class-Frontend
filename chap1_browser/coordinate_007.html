@@ -17,8 +17,7 @@
         .target{        
             color: white;
             position: absolute;
-            top: 50%;
-            left: 50%;
+            transform: translate(50%, 50%);
             padding-left: 20px;          
         }
         .targetIcon{
@@ -27,10 +26,7 @@
             border: 1px solid white;
             border-radius: 50%;
             position: absolute;
-            margin-top: -15px;
-            margin-left: -15px;
-            top: 50%;
-            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .line{
             background-color: white;
@@ -39,12 +35,12 @@
         .horizontal{
             height: 2px;
             width: 100%;
-            top: 50%;
+            transform: translateY(50%);
         }
         .vertical{
             height: 100%;
             width: 2px;
-            left: 50%;
+            transform: translateX(50%);
         }
     </style>
 </head>
@@ -59,20 +55,26 @@
     const vertical = document.querySelector('.vertical');
     const targetIcon = document.querySelector('.targetIcon');
 
-    window.addEventListener('mousemove', (e)=>{
+    
+    
+addEventListener('load',()=>{
+    const targetIconRect = targetIcon.getBoundingClientRect();
+    const targetIconHalfWidth = targetIconRect.width / 2 ;
+    const targetIconHalfHeight = targetIconRect.height / 2 ;
+
+    document.addEventListener('mousemove', (e)=>{
         const mouseX = e.clientX;
         let mouseY = e.clientY;
-        target.innerHTML = `${mouseX}px, ${mouseY}px`;
+        target.innerHTML = `${ mouseX }px, ${ mouseY }px`;
         
-        target.style.top = `${mouseY}px`;
-        target.style.left = `${mouseX}px`;
+        target.style.transform = `translate(${ mouseX - targetIconHalfWidth }px, ${ mouseY - targetIconHalfHeight }px)`;
 
-        targetIcon.style.top = `${mouseY}px`;
-        targetIcon.style.left = `${mouseX}px`;
+        targetIcon.style.transform = `translate(${ mouseX }px, ${ mouseY }px)`;
 
-        horizontal.style.top = `${mouseY}px`;
-        vertical.style.left = `${mouseX}px`;
+        horizontal.style.transform = `translateY(${ mouseY }px)`;
+        vertical.style.transform = `translateX(${ mouseX }px)`;
     })
+})
 </script>    
 </body>
 </html>
