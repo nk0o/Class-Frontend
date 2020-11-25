@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="sytle.css" type="stylesheet">
+    <script src="script.js"></script>
+    <title>Shoppiing List</title>
+</head>
+<body>
+    <header>
+        <h1>Shopping List</h1>
+    </header>
+    <div class="list">
+        <ul class="list-items">            
+        </ul>
+    </div>
+    <input type="text" class="input">
+    <button class="addItem-btn">추가</button>
+    <script>
+        const input = document.querySelector('.input');
+        const listItems = document.querySelector('.list-items');
+        const addItemBtn = document.querySelector('.addItem-btn');
+        const removeBtn = document.createElement('button');
+            removeBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`
+            removeBtn.setAttribute('class', 'remove-btn');
+        //아이템 추가하는 함수 : start
+        const addItem = function(){            
+            const item = document.createElement('li');            
+            item.setAttribute('class', 'list-item');
+            item.textContent=`${input.value}`;
+            listItems.appendChild(item);
+            item.appendChild(removeBtn);
+            input.value = '';           
+        }
+        //아이템 추가하는 함수 : end
+        //input 글씨 입력하고 엔터치면 아이템 추가
+        input.addEventListener('keydown',function(e){
+            const keyName = e.key;
+            if(keyName == 'Enter'){
+                addItem(); 
+            }
+        });
+
+        //input 글씨 입력하고 추가 버튼 누르면 아이템 추가
+        addItemBtn.addEventListener('click',function(e){
+            addItem(); 
+        });
+
+        //쓰레기통 버튼 누르면 그 줄 li 삭제 
+        console.log(removeBtn);
+
+    </script>
+</body>
+</html>

@@ -18,7 +18,7 @@
             color: white;
             position: absolute;
             transform: translate(50%, 50%);
-            padding-left: 20px;          
+            margin: 35px;          
         }
         .targetIcon{
             width: 30px;
@@ -50,12 +50,11 @@
     <div class="targetIcon"></div>    
     <div class="target"></div>
 <script>
+
     const target = document.querySelector('.target');
     const horizontal = document.querySelector('.horizontal');
     const vertical = document.querySelector('.vertical');
-    const targetIcon = document.querySelector('.targetIcon');
-
-    
+    const targetIcon = document.querySelector('.targetIcon');    
     
 addEventListener('load',()=>{
     const targetIconRect = targetIcon.getBoundingClientRect();
@@ -69,7 +68,7 @@ addEventListener('load',()=>{
         
         target.style.transform = `translate(${ mouseX - targetIconHalfWidth }px, ${ mouseY - targetIconHalfHeight }px)`;
 
-        targetIcon.style.transform = `translate(${ mouseX }px, ${ mouseY }px)`;
+        targetIcon.style.transform = `translate(${ mouseX - 15 }px, ${ mouseY - 15 }px)`;
 
         horizontal.style.transform = `translateY(${ mouseY }px)`;
         vertical.style.transform = `translateX(${ mouseX }px)`;
