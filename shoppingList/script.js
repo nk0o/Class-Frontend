@@ -1,7 +1,8 @@
 const input = document.querySelector('.input');
 const listItems = document.querySelector('.list-items');
 const addItemBtn = document.querySelector('.addItem-btn');
-
+let array = [];
+   
 
 //아이템 추가하는 함수 : start //
 const addItem = function(){            
@@ -13,10 +14,12 @@ const addItem = function(){
     removeBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     removeBtn.setAttribute('class', 'remove-btn');
     
+
     if(input.value.trim() !== ''){
         item.appendChild(removeBtn);
-        listItems.appendChild(item);           
+        listItems.appendChild(item); 
     }
+    
         input.value = '';
 }
 //아이템 추가하는 함수 : end //
@@ -24,9 +27,11 @@ const addItem = function(){
 input.addEventListener('keydown',function(e){
     const keyName = e.key;
     if(keyName == 'Enter'){
-        addItem(); 
+        addItem();
     }
 });
+array.push(item.innerText);
+console.log(array);
 
 //input 글씨 입력하고 추가 버튼 누르면 아이템 추가
 addItemBtn.addEventListener('click',function(e){

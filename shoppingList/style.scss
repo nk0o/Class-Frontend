@@ -71,6 +71,7 @@ body {
 #wrap {
     margin: $p-16;
     width: 450px;
+    min-width: 450px;
     background-color: #fff;   
     border-radius: 20px;
     display: flex; 

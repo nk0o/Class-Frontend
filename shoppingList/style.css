@@ -75,6 +75,7 @@ body {
 #wrap {
   margin: 16px;
   width: 450px;
+  min-width: 450px;
   background-color: #fff;
   border-radius: 20px;
   display: -webkit-box;
