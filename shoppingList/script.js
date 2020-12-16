@@ -1,5 +1,6 @@
 const input = document.querySelector('.input');
 const listItems = document.querySelector('.list-items');
+const listItem = document.querySelectorAll('.list-item');
 const addItemBtn = document.querySelector('.addItem-btn');
 
 
@@ -10,8 +11,9 @@ const addItem = function(){
     item.textContent=`${input.value}`;
 
     const removeBtn = document.createElement('button');
-    removeBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     removeBtn.setAttribute('class', 'remove-btn');
+    removeBtn.setAttribute('onclick', 'removeItem()');
+    removeBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
     
     if(input.value.trim() !== ''){
         item.appendChild(removeBtn);
@@ -35,3 +37,7 @@ addItemBtn.addEventListener('click',function(e){
 
 //쓰레기통 버튼 누르면 그 줄 li 삭제 
 
+const removeBtn = document.querySelector('.remove-btn');
+const removeItem = function(){
+      console.log(listItem)
+}
