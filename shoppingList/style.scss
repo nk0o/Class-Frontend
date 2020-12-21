@@ -95,27 +95,31 @@ header{
     height: 600px;
     padding:$p-8 $p-16;
     background-color: #ececec;
+    overflow-y: scroll;
     .list__item{
         font-size: $font-list;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        .item__row{
         margin-bottom: $p-8;
-        .remove__btn{
-            transition: all 300ms;
-            &:hover{
-                color: red;
-                transform: scale(1.1);
-            }            
-            i{
-                font-size: $font-list;
-            }
+        display: flex;
+        justify-content: space-between;
+            .remove__btn{
+                transition: all 300ms;
+                &:hover{
+                    color: red;
+                    transform: scale(1.1);
+                }            
+                i{
+                    font-size: $font-list;
+                }
+            }}
+        .item__divider{ 
+            width: 100%; 
+            background-color: #ccc; 
+            height: 1px;
+            margin-bottom: 10px;
         }
-    }
-    .item__divider{ 
-        width: 100%; 
-        background-color: #ccc; 
-        height: 1px;
-        margin-bottom: 10px;
     }
 
 }
