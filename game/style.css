@@ -4,7 +4,6 @@
 }
 
 body {
-  width: 1000px;
   height: 100vh;
   background-color: #000;
 }
@@ -15,11 +14,19 @@ button {
   border: none;
 }
 
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 #wrap {
   width: 900px;
   height: 500px;
   border-radius: 16px;
-  background: url("../source/img/background.png") no-repeat center;
+  background: url("./source/img/background.png") no-repeat center;
   padding: 4px;
   background-size: 100%;
   display: -webkit-box;
@@ -46,9 +53,10 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 70px;
 }
 
-#wrap .play__container {
+#wrap header .play__container {
   width: 50px;
   height: 50px;
   background-color: bisque;
@@ -66,7 +74,7 @@ button {
           justify-content: center;
 }
 
-#wrap .play__container .play__button {
+#wrap header .play__container .play__button {
   width: 28px;
   height: 28px;
   border-left: 28px solid #000;
@@ -75,7 +83,13 @@ button {
   border-top: 14px solid transparent;
 }
 
-#wrap .time__container {
+#wrap header .play__container .pause__button {
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+}
+
+#wrap header .time__container {
   width: 200px;
   height: 40px;
   background-color: #fff;
@@ -93,11 +107,11 @@ button {
           align-items: center;
 }
 
-#wrap .time__container .time {
+#wrap header .time__container .time {
   font-size: 2rem;
 }
 
-#wrap .pull__container {
+#wrap header .pull__container {
   width: 50px;
   height: 50px;
   background-color: palevioletred;
@@ -105,7 +119,7 @@ button {
   border-radius: 50%;
 }
 
-#wrap .pull__container .pull_counter {
+#wrap header .pull__container .pull_counter {
   line-height: 45px;
   text-align: center;
   color: #fff;
@@ -151,5 +165,16 @@ button {
 
 #wrap section .alert__container .alert__text span i {
   color: red;
+}
+
+#wrap section .pull__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#wrap section .bug {
+  -webkit-transform: translate(120px, 50px);
+          transform: translate(120px, 50px);
 }
 /*# sourceMappingURL=style.css.map */
