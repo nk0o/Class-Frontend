@@ -56,25 +56,7 @@ button {
   margin-bottom: 70px;
 }
 
-#wrap header .play__container {
-  width: 50px;
-  height: 50px;
-  background-color: bisque;
-  border: 4px solid #000;
-  border-radius: 8px;
-  margin-bottom: 4px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#wrap header .play__container .play__button {
+#wrap header .play__button {
   width: 28px;
   height: 28px;
   border-left: 28px solid #000;
@@ -83,7 +65,7 @@ button {
   border-top: 14px solid transparent;
 }
 
-#wrap header .play__container .pause__button {
+#wrap header .pause__button {
   width: 28px;
   height: 28px;
   background-color: #000;
@@ -154,7 +136,7 @@ button {
   padding: 8px;
 }
 
-#wrap section .alert__container .play__container .replay__button {
+#wrap section .alert__container .replay__button {
   font-size: 1.5rem;
 }
 
@@ -171,10 +153,24 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 
-#wrap section .bug {
-  -webkit-transform: translate(120px, 50px);
-          transform: translate(120px, 50px);
+.play__container {
+  width: 50px;
+  height: 50px;
+  background-color: bisque;
+  border: 4px solid #000;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
