@@ -99,7 +99,9 @@ window.addEventListener('load', ()=>{
     };
 
     //게임 시작 함수
-    function gameStart(){        
+    function gameStart(){   
+        section.innerHTML = '';     
+        playContainer.style.visibility = 'visible';
         //1.bgm재생
         soundplay(bgm);
         //2. 시간 카운트 다운 시작
@@ -153,8 +155,8 @@ window.addEventListener('load', ()=>{
         /* 리플레이 버튼 누르면 */
         if(e.target.parentNode.className == 'replay__button'){
             //1. 재생버튼 누른것과 같은 동작들
-            //gameStart();
-            location.reload();
+            gameStart();
+            
         }
         /* 벌레 누르면 */
         //1. 팝업    
