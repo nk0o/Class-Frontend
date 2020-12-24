@@ -1,3 +1,7 @@
+body {
+  background-color: #000;
+}
+
 button {
   border: none;
   outline: none;
@@ -59,6 +63,11 @@ button {
   border-radius: 8px;
   margin-bottom: 4px;
   font-size: 32px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: auto;
 }
 
 .game .game__header .game__score {
@@ -71,6 +80,11 @@ button {
   border-radius: 50%;
   font-size: 40px;
   text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: auto;
 }
 
 .game .game__field {
@@ -78,6 +92,21 @@ button {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+.game .game__field .carrot,
+.game .game__field .bug {
+  -webkit-transition: -webkit-transform 100ms ease-in;
+  transition: -webkit-transform 100ms ease-in;
+  transition: transform 100ms ease-in;
+  transition: transform 100ms ease-in, -webkit-transform 100ms ease-in;
+  cursor: pointer;
+}
+
+.game .game__field .carrot:hover,
+.game .game__field .bug:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .popUp {
