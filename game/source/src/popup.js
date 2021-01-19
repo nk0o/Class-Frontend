@@ -12,8 +12,8 @@ export default class PopUp {
         this.popUp = document.querySelector('.popUp');
 
         this.popUpRefresh.addEventListener('click',()=>{
-            this.onClick && this.onClick();
-            hide();
+            this.onClick && this.onClick(); //onClick이라는 변수가 있을때만 뒤 함수 실행
+            this.hide();
         });
 
     }
@@ -23,8 +23,8 @@ export default class PopUp {
     }
 
     showWithText(text){
+        this.popUpMessage.innerText = text;
         this.popUp.classList.remove('popUp-hide');
-        this.popUpMessage.innerText = `${text}`
     }
 
     hide(){
