@@ -11,7 +11,7 @@ button {
 .game {
   width: 800px;
   height: 500px;
-  background: url(source/img/background.png) center/cover;
+  background: url(../../source/img/background.png) center/cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
