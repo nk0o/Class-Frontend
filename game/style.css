@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#wrap {
+  width: 900px;
+  height: 500px;
+  border-radius: 16px;
+  background: url("./source/img/background.png") no-repeat center;
+  padding: 4px;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px auto 100px;
+}
+
+#wrap header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 70px;
+}
+
+#wrap header .play__button {
+  width: 28px;
+  height: 28px;
+  border-left: 28px solid #000;
+  border-right: 0 solid transparent;
+  border-bottom: 14px solid transparent;
+  border-top: 14px solid transparent;
+}
+
+#wrap header .pause__button {
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+}
+
+#wrap header .time__container {
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrap header .time__container .time {
+  font-size: 2rem;
+}
+
+#wrap header .pull__container {
+  width: 50px;
+  height: 50px;
+  background-color: palevioletred;
+  border: 4px solid #000;
+  border-radius: 50%;
+}
+
+#wrap header .pull__container .pull_counter {
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+#wrap section {
+  width: 100%;
+  height: 330px;
+  position: relative;
+}
+
+#wrap section .alert__container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+}
+
+#wrap section .alert__container .replay__button {
+  font-size: 1.5rem;
+}
+
+#wrap section .alert__container .alert__text span {
+  color: #fff;
+  font-size: 2rem;
+}
+
+#wrap section .alert__container .alert__text span i {
+  color: red;
+}
+
+#wrap section .pull__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.play__container {
+  width: 50px;
+  height: 50px;
+  background-color: bisque;
+  border: 4px solid #000;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */

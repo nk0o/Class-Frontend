@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            background-color: yellow; 
+            width: 500px; height: 500px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;                    
+        }
+        .middle{
+            background-color: pink; width: 200px; height: 200px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+        }
+        button{}
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <button>Click Me</button>
+        </div>
+    </div>
+
+    <script>
+        const outer = document.querySelector('.outer');
+        const middle = document.querySelector('.middle');
+        const button = document.querySelector('button');
+
+        outer.addEventListener('click', event => {
+            console.log(`outer: ${event.currentTarget}, ${event.target}`);
+        })
+        middle.addEventListener('click', function(){
+            console.log(`middle: ${event.currentTarget}, ${event.target}`);
+        })
+        button.addEventListener('click', () => {
+            console.log(`button: ${event.currentTarget}, ${event.target}`);
+        })
+        button.addEventListener('click', () => {
+            console.log(`button2: ${event.currentTarget}, ${event.target}`);
+        })
+
+    </script>
+</body>
+</html>
