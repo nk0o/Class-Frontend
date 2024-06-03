@@ -5,7 +5,6 @@
 //5. 인풋을 초기화하고 포커스 준다.
 
 const input = document.querySelector('.input');
-<<<<<<< HEAD
 const listItems = document.querySelector('ul.list__items');
 const addItemBtn = document.querySelector('.addItem__btn');
 /* const removeBtn = document.querySelector('.remove__btn'); */
