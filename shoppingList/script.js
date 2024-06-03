@@ -6,30 +6,12 @@
 
 const input = document.querySelector('.input');
 <<<<<<< HEAD
-const listItems = document.querySelector('.list-items');
-const listItem = document.querySelectorAll('.list-item');
-const addItemBtn = document.querySelector('.addItem-btn');
-let array = [];
-   
-
-//아이템 추가하는 함수 : start //
-const addItem = function(){            
-    const item = document.createElement('li');            
-    item.setAttribute('class', 'list-item');
-    item.textContent=`${input.value}`;
-
-    const removeBtn = document.createElement('button');
-    removeBtn.setAttribute('class', 'remove-btn');
-    removeBtn.setAttribute('onclick', 'removeItem()');
-    removeBtn.innerHTML = `<i class="fas fa-trash-alt"></i>`;
-=======
 const listItems = document.querySelector('ul.list__items');
 const addItemBtn = document.querySelector('.addItem__btn');
-const removeBtn = document.querySelector('.remove__btn');
+/* const removeBtn = document.querySelector('.remove__btn'); */
 
 
 listItems.addEventListener('click', (e)=>{
->>>>>>> c965626d6c12d8788a7cf5c47f78cae3b68a2bbd
     
     const dataID = e.target.dataset.id;
 
